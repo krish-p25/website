@@ -40,12 +40,18 @@ app.listen(80, () => {
 //Routes
 app.get('/', (req, res) => res.send('Hello World!'));
 
+app.get('/contact', (req, res) => {
+    res.setHeader('x-created-by', 'kp')
+    res.sendFile('contact.html', { root: __dirname });
+})
+
 //Error handling
 process.on('uncaughtException', (err) => {
     console.log('Uncaught Exception')
     console.log(new Date().toLocaleString('en-GB', { timeZone: 'Europe/London' }), err)
 })
 
+//404 Pager
 app.get('*', function (req, res) {
     res.setHeader('x-created-by', 'kp')
     res.send('Page 404');
