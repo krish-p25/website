@@ -1,0 +1,24 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "open source code for my portfolio site",
+  "main": "server.js",
+  "scripts": {
+    "test": "[test",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "portfolio"
+  },
+  "author": "KP",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "https": "^1.0.0",
+    "nodemailer": "^6.9.7",
+    "path": "^0.12.7"
+  }
+}
