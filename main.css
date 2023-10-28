@@ -134,7 +134,11 @@ table {
 
 body {
     margin-top: 0;
-    font-family: Poly Sans, sans-serif;
+    font-family: 'Segoe UI',
+        Tahoma,
+        Geneva,
+        Verdana,
+        sans-serif;
 }
 
 .main {
@@ -160,11 +164,11 @@ body {
     display: flex;
     justify-content: space-between;
     width: 100%;
+    padding: 0 1.5vw;
 
 }
 
 .logo {
-    padding-left: 2vw;
     display: flex;
     align-items: center;
     height: 100%;
@@ -187,6 +191,36 @@ body {
 .last-name img {
     height: 100%;
     object-fit: cover;
+}
+
+.action-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.links-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.hover-element {
+    height: 2px;
+    background-color: var(--blue-2);
+    transition: scale 0.3s ease-in-out;
+    scale: 0;
+}
+
+.action:hover .hover-element {
+    scale: 1;
 }
 
 :root {
