@@ -1,0 +1,61 @@
+.window-notification {
+    position: absolute;
+    bottom: 50px;
+    left: 45%;
+    width: 25%;
+    max-width: 300px;
+    text-align: center;
+    padding: 15px 15px;
+    border-radius: 4px;
+    background-color: #141619;
+    color: #f6f5f9;
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
+    transform: translateY(30px);
+    opacity: 0;
+    visibility: hidden;
+    animation: fade-in 4s linear forwards;
+    z-index: 999;
+}
+
+.notification__progress {
+    position: absolute;
+    left: 5px;
+    bottom: 5px;
+    width: calc(100% - 10px);
+    height: 3px;
+    transform: scalex(0);
+    transform-origin: left;
+    background-image: linear-gradient(to right, #37b3eb, #db1fa0);
+    border-radius: inherit;
+    animation: load 3s 0.25s linear forwards;
+}
+
+@keyframes fade-in {
+    5% {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+
+    90% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes load {
+    to {
+        transform: scalex(1);
+    }
+}
+
+@media (max-width: 1171px) {
+    .window-notification {
+        position: sticky;
+        bottom: 30px;
+        width: 80vw;
+        left: 10vw ;
+        margin: 0;
+        max-width: none;
+    }
+}
