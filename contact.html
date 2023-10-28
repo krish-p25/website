@@ -11,9 +11,11 @@
 </head>
 
 <body>
-    
+    <div id="loading" class="loading-logo-container">
+        <img src="https://i.imgur.com/Vsuhzh3.png" alt="Logo" class="loading-logo">
+        <div class="glare in-dark-background"></div>
+    </div>
     <div class="main">
-        <div class="background"></div>
 
         <div class="banner">
             <div class="logo">
@@ -47,9 +49,9 @@
                         <div class="hover-element"></div>
                     </div>
                 
-                    <div class="action">
+                    <div id="active" class="action">
                         <a href="contact.html" class="action-link">Contact</a>
-                        <div class="hover-element"></div>
+                        <div id="active-element" class="hover-element"></div>
                     </div>
                 </div>
 
@@ -62,9 +64,43 @@
         <div class="contact-box">
 
         </div>
+
+        <div class="mobile-links-container">
+            <div class="action-box">
+                <div class="action">
+                    <a href="index.html" class="action-link">Home</a>
+                    <div class="hover-element"></div>
+                </div>
+        
+                <div class="action">
+                    <a href="about.html" class="action-link">About</a>
+                    <div class="hover-element"></div>
+                </div>
+        
+                <div class="action">
+                    <a href="projects.html" class="action-link">Projects</a>
+                    <div class="hover-element"></div>
+                </div>
+        
+                <div id="active" class="action">
+                    <a href="contact.html" class="action-link">Contact</a>
+                    <div class="hover-element"></div>
+                </div>
+            </div>
+        
+            <div class="slide-animation"></div>
+        </div>
     </div>
 
     <script src="contact.js"></script>
+    <script>
+        window.onload = function() {
+            setTimeout(function() {
+                document.getElementById("loading").style.opacity = "0";
+                document.getElementById("loading").style.height = "0";
+            }, 1000);
+        }
+    </script>
 </body>
 
 </html>
