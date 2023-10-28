@@ -1,6 +1,10 @@
 const express = require('express');
 const fs = require('fs');
+const path = require('path');
+const cors = require('cors');
 const app = express();
+const bodyParser = require('body-parser');
+const https = require('https');
 
 //Middleware
 app.use(express.json({ limit: '50mb' }));
@@ -20,6 +24,10 @@ app.use((req, res, next) => {
 });
 
 //HTTPS server
+var options = {
+    key: fs.readFileSync('key.pem'),
+    cert: fs.readFileSync('cert.pem')
+}
 https.createServer(options, app).listen(443, () => {
     console.log(new Date().toLocaleString('en-GB', { timeZone: 'Europe/London' }), 'HTTPS Server running on port 443');
 });
